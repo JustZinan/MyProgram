@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/title_bar_bg"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+        
+        <ImageButton android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_home_nor"
+            android:scaleType="center"
+            android:src="@null"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true">
+        <ImageButton android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_more_nor"
+            android:scaleType="center"
+            android:src="@null"/>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/title_center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/right_layout"
+        android:layout_toRightOf="@id/left_layout"
+        android:layout_margin="@dimen/title_bar_edit_mar_top"
+        android:layout_centerInParent="true"
+>
+        <EditText android:id="@+id/etSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/search_edit"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:hint="请输入文字..."/>
+    </RelativeLayout>
+
+</RelativeLayout>
